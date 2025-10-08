@@ -1,6 +1,7 @@
 import { SwitchComponent } from "@/components/SwitchComponent"
 import { Playfair_Display_SC, Roboto } from "next/font/google";
 import Image from "next/image";
+import Link from "next/link";
 
 const playfair = Playfair_Display_SC({
   subsets: ["latin"], weight: ["400"]
@@ -17,9 +18,9 @@ export default function Home() {
         <div>
           <SwitchComponent />
         </div>
-        <div className={`${playfair.className} text-[20px] pb-2 tracking-widest`}>
+        <Link href="/about" className={`${playfair.className} text-[20px] pb-2 tracking-widest`}>
           about
-        </div>
+        </Link>
       </header>
 
       <main className="flex flex-col items-center justify-center mt-60">
@@ -47,7 +48,7 @@ export default function Home() {
             />
           </div>
           <div>
-            <button className={`${roboto.className} text-[20px] mt-4 w-50 h-10 bg-gray-100 rounded-md hover:bg-gray-200 transition-colors`}>
+            <button className={`${roboto.className} cursor-pointer text-[20px] mt-4 w-50 h-10 bg-gray-100 rounded-md hover:bg-gray-200 transition-colors`}>
               shorten link
             </button>
           </div>
