@@ -53,6 +53,10 @@ export default function Home() {
           </div>
         </div>
       </main>
+
+      <footer className={`${roboto.className} text-[14px] flex mt-60 justify-center text-gray-400`}>
+        @Perpetva
+      </footer>
     </>
   )
 }
