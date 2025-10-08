@@ -1,11 +1,7 @@
-import { SwitchComponent } from "@/components/SwitchComponent"
-import { Playfair_Display_SC, Roboto } from "next/font/google";
-import Image from "next/image";
-import Link from "next/link";
-
-const playfair = Playfair_Display_SC({
-  subsets: ["latin"], weight: ["400"]
-})
+import AboutComponent from "@/components/AboutOrHomeComponent";
+import BrevlyComponent from "@/components/BrevlyComponent";
+import PerpetvaSignature from "@/components/PerpetvaSignature";
+import { Roboto } from "next/font/google";
 
 const roboto = Roboto({
   subsets: ["latin"], weight: ["100"]
@@ -14,31 +10,11 @@ const roboto = Roboto({
 export default function Home() {
   return (
     <>
-      <header className="flex items-center justify-end m-16 gap-6">
-        <div>
-          <SwitchComponent />
-        </div>
-        <Link href="/about" className={`${playfair.className} text-[20px] pb-2 tracking-widest`}>
-          about
-        </Link>
-      </header>
+      <AboutComponent text="about" path="about" />
 
-      <main className="flex flex-col items-center justify-center mt-60">
-        <div className="flex flex-col items-center gap-2">
-          <Image
-            src="/images/light-logo.png"
-            alt="lightlogo"
-            width={106}
-            height={51}
-            className=""
-          />
-          <div className={`text-[40px] ${playfair.className} tracking-wide`}>
-            BREVLY
-          </div>
-          <div className={`text-[20px] ${roboto.className} tracking-[0.25em]`}>
-            The perfect size for your link
-          </div>
-        </div>
+      <main className="flex flex-col items-center justify-center mt-40">
+        <BrevlyComponent text="The perfect size for your link" letterSpacing="0.25" />
+
         <div className="flex flex-col items-center mt-15 gap-5">
           <div>
             <input
@@ -55,9 +31,7 @@ export default function Home() {
         </div>
       </main>
 
-      <footer className={`${roboto.className} text-[14px] flex mt-60 justify-center text-gray-400`}>
-        @Perpetva
-      </footer>
+      <PerpetvaSignature />
     </>
   )
 }
