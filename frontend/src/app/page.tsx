@@ -22,7 +22,7 @@ export default function Home() {
         </div>
       </header>
 
-      <main className="flex justify-center min-h-screen mt-60">
+      <main className="flex flex-col items-center justify-center mt-60">
         <div className="flex flex-col items-center gap-2">
           <Image
             src="/images/light-logo.png"
@@ -38,7 +38,20 @@ export default function Home() {
             The perfect size for your link
           </div>
         </div>
-
+        <div className="flex flex-col items-center mt-15 gap-5">
+          <div>
+            <input
+              type="text"
+              placeholder="link, please"
+              className={`${roboto.className} text-[16px] border-b border-gray-300 p-2 w-130 outline-none text-center focus:border-gray-500 transition-colors duration-1000 peer-focus:w-full`}
+            />
+          </div>
+          <div>
+            <button className={`${roboto.className} text-[20px] mt-4 w-50 h-10 bg-gray-100 rounded-md hover:bg-gray-200 transition-colors`}>
+              shorten link
+            </button>
+          </div>
+        </div>
       </main>
     </>
   )
