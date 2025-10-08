@@ -1,7 +1,18 @@
+import { SwitchComponent } from "@/components/SwitchComponent"
+
 export default function Home() {
   return (
     <>
-      Just Brevly
+      <header className="flex justify-end">
+        <div>
+          <SwitchComponent />
+        </div>
+
+      <div>
+        ABOUT
+      </div>
+      </header >
     </>
+
   )
 }
