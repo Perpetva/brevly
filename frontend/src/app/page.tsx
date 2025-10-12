@@ -1,13 +1,17 @@
+"use client";
 import AboutComponent from "@/components/AboutOrHomeComponent";
 import BrevlyComponent from "@/components/BrevlyComponent";
 import PerpetvaSignature from "@/components/PerpetvaSignature";
+import MyModal from "@/components/ModalPopUp";
 import { Roboto } from "next/font/google";
+import { useState } from "react";
 
 const roboto = Roboto({
   subsets: ["latin"], weight: ["100"]
 })
 
 export default function Home() {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <>
       <AboutComponent text="about" path="about" />
@@ -24,12 +28,16 @@ export default function Home() {
             />
           </div>
           <div>
-            <button className={`${roboto.className} cursor-pointer text-[20px] mt-4 w-50 h-10 bg-gray-100 rounded-md hover:bg-gray-200 transition-colors`}>
+            <button onClick={() => setIsOpen(true)} className={`${roboto.className} cursor-pointer text-[20px] mt-4 w-50 h-10 bg-gray-100 rounded-md hover:bg-gray-200 transition-colors`}>
               shorten link
             </button>
           </div>
         </div>
       </main>
+
+      <MyModal isOpen={isOpen} onClose={() => setIsOpen(false)} title="Shortened link">
+        "Seu link curto"
+      </MyModal>
 
       <PerpetvaSignature />
     </>
