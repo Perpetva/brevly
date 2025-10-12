@@ -1,0 +1,19 @@
+# Ambiente virtual
+venv/
+.env
+
+# Arquivos de cache do Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Logs
+*.log
+
+# Configurações locais
+.env.local
+.DS_Store
+
+# Banco local (caso use SQLite)
+*.db
