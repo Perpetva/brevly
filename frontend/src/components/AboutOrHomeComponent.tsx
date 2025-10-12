@@ -11,6 +11,7 @@ export default function AboutOrHomeComponent({ text, path = "/" }: { text: strin
         <header className="flex items-center justify-end m-16 gap-6">
             <div>
                 <SwitchComponent />
+                
             </div>
             <Link href={path} className={`${playfair.className} text-[20px] pb-2 tracking-widest`}>
                 {text}
