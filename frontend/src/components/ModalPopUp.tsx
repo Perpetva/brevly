@@ -24,20 +24,17 @@ export default function MyModal({ isOpen, onClose, title = 'Payment successful',
               <DialogTitle as="h3" className="text-base/7 font-medium text-gray-900 text-center">
                 {title}
               </DialogTitle>
-              {children ? (
-                <div className="mt-2 text-sm/6 text-gray-700 text-center">{children}</div>
-              ) : (
-                <p className="mt-2 text-sm/6 text-gray-600 text-center">
-                  Your payment has been successfully submitted. We’ve sent you an email with all of the details of your order.
-                </p>
-              )}
+
+              <div className="mt-2 text-sm/6 text-gray-700 text-center">{children}</div>
               <div className="mt-4 flex justify-center">
+
                 <Button
-                  className="inline-flex items-center gap-2 rounded-md bg-gray-700 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-inner shadow-white/10 focus:not-data-focus:outline-none data-focus:outline data-focus:outline-white data-hover:bg-gray-600 data-open:bg-gray-700"
+                  className="inline-flex cursor-pointer items-center gap-2 rounded-md bg-gray-700 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-inner shadow-white/10 focus:not-data-focus:outline-none data-focus:outline data-focus:outline-white data-hover:bg-gray-600 data-open:bg-gray-700"
                   onClick={onClose}
                 >
                   Got it, thanks!
                 </Button>
+
               </div>
             </DialogPanel>
           </div>
