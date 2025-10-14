@@ -1,6 +1,6 @@
 "use client";
 
-import AboutComponent from "@/components/AboutOrHomeComponent"
+import AboutOrHomeComponent from "@/components/AboutOrHomeComponent"
 import BrevlyComponent from "@/components/BrevlyComponent"
 import PerpetvaSignature from "@/components/PerpetvaSignature"
 import MyModal from "@/components/ModalPopUp"
@@ -21,7 +21,7 @@ export default function Home() {
 
   return (
     <>
-      <AboutComponent text="about" path="about" />
+      <AboutOrHomeComponent text="about" path="about" />
 
       <main className="flex flex-col items-center justify-center mt-40">
         <BrevlyComponent text="The perfect size for your link" letterSpacing="0.25" />
@@ -61,6 +61,7 @@ export default function Home() {
               
               className={`${roboto.className} cursor-pointer text-[20px] mt-4 w-50 h-10 bg-gray-100 rounded-md hover:bg-gray-200 transition-colors`}
               disabled={loading}
+              id="shorten-button"
             >
               {loading ? 'shortening...' : 'shorten link'}
             </button>

@@ -13,7 +13,7 @@ export default function AboutOrHomeComponent({ text, path = "/" }: { text: strin
                 <SwitchComponent />
                 
             </div>
-            <Link href={path} className={`${playfair.className} text-[20px] pb-2 tracking-widest`}>
+            <Link id="home-or-about" href={path} className={`${playfair.className} text-[20px] pb-2 tracking-widest`}>
                 {text}
             </Link>
         </header>

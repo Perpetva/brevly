@@ -19,10 +19,10 @@ export default function BrevlyComponent({ text, letterSpacing }: { text: string,
                 height={51}
                 className=""
             />
-            <div className={`text-[40px] ${playfair.className} tracking-wide`}>
+            <div id="brevly-title" className={`text-[40px] ${playfair.className} tracking-wide`}>
                 BREVLY
             </div>
-            <div className={`text-[20px] ${roboto.className}`} style={{ letterSpacing: `${letterSpacing}em` }}>
+            <div id="brevly-subtitle" className={`text-[20px] ${roboto.className}`} style={{ letterSpacing: `${letterSpacing}em` }}>
                 {text}
             </div>
         </div>
