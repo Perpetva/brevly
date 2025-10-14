@@ -34,6 +34,7 @@ export default function Home() {
               className={`${roboto.className} text-[16px] border-b border-gray-300 p-2 w-130 outline-none text-center focus:border-gray-500 transition-colors duration-1000 peer-focus:w-full`}
               value={link}
               onChange={(e) => setLink(e.target.value)}
+              id="link-please"
             />
           </div>
           <div>
@@ -46,16 +47,16 @@ export default function Home() {
                 try {
                   setLoading(true);
                   const data = await shortenLink(toShorten)
-                  const candidate = typeof data === 'string' ? data : (data?.shortened_url || data?.shortUrl || data?.url || data?.short || "");
-                  setShortLink(candidate || "");
-                  setIsOpen(true);
+                  const candidate = typeof data === 'string' ? data : (data?.shortened_url || data?.shortUrl || data?.url || data?.short || "")
+                  setShortLink(candidate || "")
+                  setIsOpen(true)
 
                 } catch (e) {
-                  console.error("Error shortening link:", e);
-                  alert("Failed to shorten the link. Please try again.");
+                  console.error("Error shortening link:", e)
+                  alert("Failed to shorten the link. Please try again.")
 
                 } finally {
-                  setLoading(false);
+                  setLoading(false)
                 }
               }}
               

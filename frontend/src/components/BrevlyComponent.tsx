@@ -12,13 +12,24 @@ const roboto = Roboto({
 export default function BrevlyComponent({ text, letterSpacing }: { text: string, letterSpacing: string }) {
     return (
         <div className="flex flex-col items-center gap-2">
-            <Image
-                src="/images/light-logo.png"
-                alt="lightlogo"
-                width={106}
-                height={51}
-                className=""
-            />
+            <div className="relative" style={{ width: 106, height: 51 }}>
+                <Image
+                    id="logo-light"
+                    src="/images/light-logo.png"
+                    alt="lightlogo"
+                    width={106}
+                    height={51}
+                    style={{ position: 'absolute', inset: 0, opacity: 1, transition: 'opacity 1500ms ease' }}
+                />
+                <Image
+                    id="logo-dark"
+                    src="/images/dark-logo.png"
+                    alt="darklogo"
+                    width={106}
+                    height={51}
+                    style={{ position: 'absolute', inset: 0, opacity: 0, transition: 'opacity 1500ms ease' }}
+                />
+            </div>
             <div id="brevly-title" className={`text-[40px] ${playfair.className} tracking-wide`}>
                 BREVLY
             </div>
