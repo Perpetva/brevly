@@ -36,6 +36,6 @@ Um encurtador de links usando Next.js + React e backend FastAPI.
 
 ## Licença
 
-Projeto educacional. Sinta-se livre para adaptar.
+Este projeto está licenciado sob os termos da [Licença MIT](./LICENSE).
 
 Feito por @Perpetva
